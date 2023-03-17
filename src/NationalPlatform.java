@@ -22,10 +22,9 @@ public class NationalPlatform {
         } else {
             reader = new LineReader();
         }
-        if (reader.test()) {
-            finder = new PathFinder(reader.process());
-            paths = finder.calculatePath();
-        }
+        finder = new PathFinder(reader.process());
+        paths = finder.calculatePath();
+
 
         for(String path: paths){
             System.out.println(path);

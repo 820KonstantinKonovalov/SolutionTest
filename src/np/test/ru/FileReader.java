@@ -2,6 +2,7 @@ package np.test.ru;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.DataTruncation;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,9 +11,14 @@ public class FileReader implements Reader {
     private String path;
     @Override
     public ArrayList<Query> process() {
+
         ArrayList<Query> pairs = new ArrayList<>();
 
         try {
+            if(!test()){
+                String message = String.format("File/Path %s - doesn't exist.", path);
+                throw new FileNotFoundException(message);
+            }
             File file = new File(path);
             Scanner sc = new Scanner(file);
             int i = 0;
@@ -51,7 +57,7 @@ public class FileReader implements Reader {
         this.path = path;
     }
 
-   public boolean test() {
+   private boolean test() {
        File f = new File(path);
        if (!f.exists() || f.isDirectory())
            return false;

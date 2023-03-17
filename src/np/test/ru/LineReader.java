@@ -8,11 +8,7 @@ public class LineReader implements Reader {
         return null;
     }
 
-    @Override
-    public boolean test(){
-        System.out.println("Please, specify numbers of query:");
-        return true;
-    }
+    //System.out.println("Please, specify numbers of query:");
 
     public LineReader(){
 
