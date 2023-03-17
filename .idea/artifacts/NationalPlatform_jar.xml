@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NationalPlatform:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NationalPlatform_jar</output-path>
+    <root id="archive" name="NationalPlatform.jar">
+      <element id="module-output" name="NationalPlatform" />
+    </root>
+  </artifact>
+</component>
