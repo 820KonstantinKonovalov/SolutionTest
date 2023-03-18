@@ -7,7 +7,6 @@ public class NationalPlatform {
         // Valid values of first arg: empty or 'path to file'
         Reader reader;
         PathFinder finder;
-        String firstArg = "";
         ArrayList<String> paths = new ArrayList<>();
 
         //help info:
@@ -15,20 +14,25 @@ public class NationalPlatform {
         System.out.println(" There are two case to run application:");
         System.out.println("1 - without any parameters");
         System.out.println("2 - with 'path to data-file'");
-
+        // -------------
+        // PREPARATIONS:
         if (args.length > 0) {
-            firstArg = args[0];
-            reader = new FileReader(firstArg);
+            reader = new FileReader(args[0]);
         } else {
             reader = new LineReader();
         }
+        // ----
+        // WORK
         finder = new PathFinder(reader.process());
-        paths = finder.calculatePath();
+        paths = finder.calculatePath(reader.getCount());
 
-
-        for(String path: paths){
-            System.out.println(path);
+        // ------------
+        // SHOW RESULTS
+        System.out.println("Result is:");
+        for(String item: paths){
+            System.out.print(item + " ");
         }
+        System.out.println("");
 
     }
 }

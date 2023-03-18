@@ -1,66 +1,68 @@
 package np.test.ru;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.DataTruncation;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader implements Reader {
     private String path;
+
+    private int count;
+
+    @Override
+    public int getCount() {
+        return count;
+    }
+
+    public FileReader(String path) {
+        this.path = path;
+        count = 0;
+    }
+
     @Override
     public ArrayList<Query> process() {
 
         ArrayList<Query> pairs = new ArrayList<>();
 
         try {
-            if(!test()){
+            if(!test()) {
                 String message = String.format("File/Path %s - doesn't exist.", path);
                 throw new FileNotFoundException(message);
             }
             File file = new File(path);
             Scanner sc = new Scanner(file);
-            int i = 0;
-            int j = 0;
-
             String temp;
-            int count = 0;
-
 
             // get count of queries:
             temp = sc.nextLine().stripTrailing();
             if(!temp.equals(null) && temp.matches("[0-9]+")) {
-                count = Integer.parseInt(temp);
-            }else {
+                this.count = Integer.parseInt(temp);
+            } else {
                 throw new NumberFormatException("Please, verify the number of queries: " + temp);
             }
-
-            while (sc.hasNextLine() || count!=0) {
+            // *********************
+            // General work is here:
+            // *********************
+            while (sc.hasNextLine()) {
                 // Query pairs getting:
                 String[] pair = sc.nextLine().split(" ");
                 pairs.add(new Query(pair[0], pair[1]));
-                count --;
-            }
-            if(count != 0){
-                throw new ArithmeticException ("The count number of query doesn't coincide with given lines");
             }
             sc.close();
 
         }catch (Exception e){
             e.printStackTrace();
         }
+        for(Query item: pairs){
+            System.out.println(item);
+        }
         return pairs;
     }
 
-    public FileReader(String path){
-        this.path = path;
-    }
-
-   private boolean test() {
-       File f = new File(path);
-       if (!f.exists() || f.isDirectory())
-           return false;
+    private boolean test() {
+       File file = new File(path);
+       if (!file.exists() || file.isDirectory()) return false;
        return true;
    }
 }
