@@ -54,9 +54,9 @@ public class FileReader implements Reader {
         }catch (Exception e){
             e.printStackTrace();
         }
-        for(Query item: pairs){
+       /* for(Query item: pairs){
             System.out.println(item);
-        }
+        } */
         return pairs;
     }
 
