@@ -1,0 +1,2 @@
+switch on local variables: --kinds-java=+l
+ctags --languages=java --kinds-java=+l -R ./src

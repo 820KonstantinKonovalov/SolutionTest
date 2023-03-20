@@ -16,7 +16,7 @@ public class PathFinder{
          //So, what do we have:
          System.out.println("Data:");
          for(Query  item: paths){
-             System.out.println(item.getFrom() + "-" + item.getTo());
+             System.out.println(item.getFrom() + " * " + item.getTo());
          }
          // ************************************************************************************
          // MAIN WORK IS HERE (all around this place is an Africa, but we need only bananas :-):

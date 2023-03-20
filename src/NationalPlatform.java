@@ -10,10 +10,14 @@ public class NationalPlatform {
         ArrayList<String> paths = new ArrayList<>();
 
         //help info:
+        System.out.println("");
         System.out.println("--------How to use this utility:-------");
         System.out.println(" There are two case to run application:");
-        System.out.println("1 - without any parameters");
+        System.out.println("1 - without any parameters. ");
+        System.out.println("Sorry about: only Latin letters in this mode");
         System.out.println("2 - with 'path to data-file'");
+        System.out.println("as example(without parameter): $Dir>java - jar C:\\out\\NationalPlatform.jar ");
+        System.out.println("with path to file: $Dir>java - jar C:\\out\\NationalPlatform.jar C:\\traning\\NationalPlatform\\Data\\test.txt");
         // -------------
         // PREPARATIONS:
         if (args.length > 0) {
@@ -28,7 +32,7 @@ public class NationalPlatform {
 
         // ------------
         // SHOW RESULTS
-        System.out.println("Result is:");
+        System.out.println("The result is:");
         for(String item: paths){
             System.out.print(item + " ");
         }

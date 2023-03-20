@@ -1,0 +1,66 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	C:/traning/NationalPlatform/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/80ee839/
+FileReader	./src/np/test/ru/FileReader.java	/^    public FileReader(String path) {$/;"	m	class:FileReader
+FileReader	./src/np/test/ru/FileReader.java	/^public class FileReader implements Reader {$/;"	c
+LineReader	./src/np/test/ru/LineReader.java	/^public class LineReader implements Reader {$/;"	c
+NationalPlatform	./src/NationalPlatform.java	/^public class NationalPlatform {$/;"	c
+PathFinder	./src/np/test/ru/PathFinder.java	/^    public PathFinder(ArrayList<Query> queries){$/;"	m	class:PathFinder
+PathFinder	./src/np/test/ru/PathFinder.java	/^public class PathFinder{$/;"	c
+Query	./src/np/test/ru/Query.java	/^    public Query(String from, String to){$/;"	m	class:Query
+Query	./src/np/test/ru/Query.java	/^public class Query {$/;"	c
+Reader	./src/np/test/ru/Reader.java	/^public interface Reader {$/;"	i
+br	./src/np/test/ru/LineReader.java	/^            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));$/;"	l
+calculatePath	./src/np/test/ru/PathFinder.java	/^     public ArrayList<String> calculatePath(int count){$/;"	m	class:PathFinder
+count	./src/np/test/ru/FileReader.java	/^    private int count;$/;"	f	class:FileReader	file:
+count	./src/np/test/ru/LineReader.java	/^    private int count = 0;$/;"	f	class:LineReader	file:
+edge	./src/np/test/ru/Query.java	/^    private String[] edge = new String[2];$/;"	f	class:Query	file:
+equals	./src/np/test/ru/Query.java	/^    public boolean equals(Object o) {$/;"	m	class:Query
+file	./src/np/test/ru/FileReader.java	/^            File file = new File(path);$/;"	l
+file	./src/np/test/ru/FileReader.java	/^       File file = new File(path);$/;"	l
+finder	./src/NationalPlatform.java	/^        PathFinder finder;$/;"	l
+flatList	./src/np/test/ru/PathFinder.java	/^         List<String> flatList = paths.stream()$/;"	l
+getCount	./src/np/test/ru/FileReader.java	/^    public int getCount() {$/;"	m	class:FileReader
+getCount	./src/np/test/ru/LineReader.java	/^    public int getCount(){$/;"	m	class:LineReader
+getCount	./src/np/test/ru/Reader.java	/^    public int getCount();$/;"	m	interface:Reader
+getEdge	./src/np/test/ru/Query.java	/^    public String[] getEdge() {$/;"	m	class:Query
+getFrom	./src/np/test/ru/Query.java	/^    public String getFrom() {$/;"	m	class:Query
+getTo	./src/np/test/ru/Query.java	/^    public String getTo() {$/;"	m	class:Query
+hashCode	./src/np/test/ru/Query.java	/^    public int hashCode() {$/;"	m	class:Query
+i	./src/np/test/ru/LineReader.java	/^            int i = 1;$/;"	l
+inputMessage	./src/np/test/ru/LineReader.java	/^                String inputMessage = String.format("Enter %d query pair 'From' 'To' :", i);$/;"	l
+main	./src/NationalPlatform.java	/^    public static void main(String[] args) {$/;"	m	class:NationalPlatform
+message	./src/np/test/ru/FileReader.java	/^                String message = String.format("File\/Path %s - doesn't exist.", path);$/;"	l
+nextKey	./src/np/test/ru/PathFinder.java	/^         String nextKey = "";$/;"	l
+np.test.ru	./src/np/test/ru/FileReader.java	/^package np.test.ru;$/;"	p
+np.test.ru	./src/np/test/ru/LineReader.java	/^package np.test.ru;$/;"	p
+np.test.ru	./src/np/test/ru/PathFinder.java	/^package np.test.ru;$/;"	p
+np.test.ru	./src/np/test/ru/Query.java	/^package np.test.ru;$/;"	p
+np.test.ru	./src/np/test/ru/Reader.java	/^package np.test.ru;$/;"	p
+pair	./src/np/test/ru/FileReader.java	/^                String[] pair = sc.nextLine().split(" ");$/;"	l
+pair	./src/np/test/ru/LineReader.java	/^                String[] pair = br.readLine().split(" ");$/;"	l
+pairs	./src/np/test/ru/FileReader.java	/^        ArrayList<Query> pairs = new ArrayList<>();$/;"	l
+pairs	./src/np/test/ru/LineReader.java	/^        ArrayList<Query> pairs = new ArrayList<>();$/;"	l
+path	./src/np/test/ru/FileReader.java	/^    private String path;$/;"	f	class:FileReader	file:
+paths	./src/NationalPlatform.java	/^        ArrayList<String> paths = new ArrayList<>();$/;"	l
+paths	./src/np/test/ru/PathFinder.java	/^    private ArrayList<Query> paths;$/;"	f	class:PathFinder	file:
+process	./src/np/test/ru/FileReader.java	/^    public ArrayList<Query> process() {$/;"	m	class:FileReader
+process	./src/np/test/ru/LineReader.java	/^    public ArrayList<Query> process() {$/;"	m	class:LineReader
+process	./src/np/test/ru/Reader.java	/^    public ArrayList<Query> process();$/;"	m	interface:Reader
+reader	./src/NationalPlatform.java	/^        Reader reader;$/;"	l
+result	./src/np/test/ru/Query.java	/^        int result = edge[0].hashCode();$/;"	l
+resultPath	./src/np/test/ru/PathFinder.java	/^         ArrayList<String> resultPath = new ArrayList<>();$/;"	l
+sc	./src/np/test/ru/FileReader.java	/^            Scanner sc = new Scanner(file);$/;"	l
+temp	./src/np/test/ru/FileReader.java	/^            String temp;$/;"	l
+test	./src/np/test/ru/FileReader.java	/^    private boolean test() {$/;"	m	class:FileReader	file:
+tmpSet	./src/np/test/ru/PathFinder.java	/^         Map<String, String> tmpSet = paths$/;"	l
+toString	./src/np/test/ru/Query.java	/^    public String toString() {$/;"	m	class:Query
+uniqueItems	./src/np/test/ru/PathFinder.java	/^         List<String> uniqueItems = flatList$/;"	l
