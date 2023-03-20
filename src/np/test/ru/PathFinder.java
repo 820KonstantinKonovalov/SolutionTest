@@ -1,11 +1,10 @@
 package np.test.ru;
 
-import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class PathFinder{
-    private ArrayList<Query> paths;
+    private final ArrayList<Query> paths;
     public PathFinder(ArrayList<Query> queries){
         paths = queries;
     }
@@ -24,12 +23,12 @@ public class PathFinder{
          // according to task only two items must be in uniqueItems (as possible validation)
          List<String> flatList = paths.stream()
                 .flatMap(l->Arrays.stream(l.getEdge()))
-                .collect(Collectors.toList());
+                .toList();
 
          List<String> uniqueItems = flatList
                  .stream()
                  .filter(QueryEdge -> Collections.frequency(flatList, QueryEdge) == 1)
-                 .collect(Collectors.toList());
+                 .toList();
 
          //Constructing the rout:
          Map<String, String> tmpSet = paths
